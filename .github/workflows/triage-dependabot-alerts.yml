@@ -4,9 +4,9 @@ name: Triage Dependabot Alerts
 # is NOT in the production dependency tree of any published @medusajs/* package
 # (i.e. build tooling, integration-tests, devDependencies). Runs weekly and on demand.
 
+# Fork note: upstream's scheduled Dependabot triage is disabled here.
+# Keep this workflow manual-only so the fork does not run Medusa's internal maintenance job.
 on:
-  schedule:
-    - cron: "0 3 * * *" # Every Day at 03:00 UTC
   workflow_dispatch: # Allow manual trigger
     inputs:
       dismiss:
